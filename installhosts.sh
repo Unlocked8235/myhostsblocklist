@@ -6,10 +6,13 @@ if [[ $(id -u -n) != "root" ]]
     exit 1
 fi
 
-sudo rm /etc/hosts
+rm /etc/hosts
 
 # Now download the new hosts file and put it into place
-sudo curl "http://sbc.io/hosts/alternates/fakenews-gambling-porn-social/hosts" >> /etc/hosts
-sudo curl "https://raw.githubusercontent.com/Unlocked8235/myhostsblocklist/main/hosts" >> /etc/hosts
+curl "http://sbc.io/hosts/alternates/fakenews-gambling-porn-social/hosts" >> /etc/hosts
+curl "https://raw.githubusercontent.com/Unlocked8235/myhostsblocklist/main/hosts" >> /etc/hosts
+
+# delete whatsapp entries so i can use it
+sed -i '/whatsapp/d' /etc/hosts
 
 exit 0
