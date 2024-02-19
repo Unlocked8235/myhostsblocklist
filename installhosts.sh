@@ -14,5 +14,6 @@ curl "https://raw.githubusercontent.com/Unlocked8235/myhostsblocklist/main/hosts
 
 # delete whatsapp entries so i can use it
 sed -i '/whatsapp/d' /etc/hosts
-
+sed -i '/reddit/d' /etc/hosts
+sed -i '/fmovies/d' /etc/hosts
 exit 0
