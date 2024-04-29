@@ -14,9 +14,11 @@ cat customhosts >> fullhostslist
 # delete entries so i can use them, local
 sed -i '/whatsapp/d' /etc/hosts
 sed -i '/reddit/d' /etc/hosts
+sed -i '/linkedin/d' /etc/hosts
 
 # delete entries so i can use them, fullhostslist
 sed -i '/whatsapp/d' fullhostslist
 sed -i '/reddit/d' fullhostslist
+sed -i '/linkedin/d' fullhostslist
 
 exit 0
